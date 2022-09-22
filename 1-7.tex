@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{amsmath, amsfonts, enumitem}
+
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\vv}{\mathrm{v}}
+\newcommand{\ww}{\mathrm{w}}
+\newcommand{\zero}{\mathrm{0}}
+
+\begin{document}
+\begin{enumerate}[label=\textbf{7.\arabic*.}]
+    \item $X, Y$ are subspaces of a vector space $V$, that is they are closed
+    under vector addition and scalar multiplication. It follows $X\cap Y$ is
+    closed under vector addition and scalar for it only contains vectors in both
+    $X$ and $Y$.
+
+    \item Let $\vv_{x, 1},\ldots,\vv_{x, n}$ be a basis in $X$ and
+    $\vv_{y, 1},\ldots,\vv_{y,m}$ be a basis in $Y$. Then, linear combination
+    of the two bases generates $X+Y$ by definition. Any vectors $\vv_1, \vv_2$
+    in $X+Y$ are linear combination of the two bases, and closed under
+    vector addition. The same holds for scalar multiplication which merely
+    scales the vector, multiplies all co-efficients by a scalar.
+
+    Note: it's not claimed linear combination of two bases will admit
+    unique representation for a vector in $X+Y$.
+
+    \item Assume $\vv+\mathrm{x}$ is in some subpsace $V_0$ for any $\mathrm{x}$
+    in $V_0$ and $\vv$ being not. For $\mathrm{x} = \zero$, $\vv$ is in
+    $V_0$, and we contradict our assumption.
+    
+    \item Suppose $\vv$ is a vector in subspace $X\cup Y$. Note $X$ is a subset
+    of $X\cup Y$, for $\mathrm{x}$ in $X$ and $\vv$ not in $X$,
+    $\vv + \mathrm{x}$ is in $Y$. With $Y$ being a subpsace, it must contain
+    $\vv$ and its additive inverse, and $\vv + \mathrm{x} - \vv = \mathrm{x}$
+    is in $Y$ by closure. Or, $X$ is a subset of $Y$.
+
+    \item Define $e_{i, j}$ as matrix with all entries 0 but $(i, j)$th
+    one being 1. The smallest subpsace for upper triangular matrices of
+    $4\times 4$ would be linear span of vectors $e_{i, j}$ with
+    $0< i\leq j\leq 4$ as it only contains upper-triangular matrices and zero.
+\end{enumerate}
+\end{document}

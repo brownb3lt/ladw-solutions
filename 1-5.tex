@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{amsmath, amsfonts}
+\usepackage{enumitem}
+
+\newcommand{\trace}{\mathrm{trace}}
+\newcommand{\R}{\mathbb{R}}
+
+\begin{document}
+\begin{enumerate}[label=\textbf{5.\arabic*.}]
+    \setcounter{enumi}{2}
+    
+    \item $T_{\alpha+\beta} = T_{\alpha}T_{\beta} = T_{\beta}T_{\alpha}$
+    
+    \addtocounter{enumi}{2}
+
+    \item Define $T, T':M_{n\times n}^{\R} \rightarrow \R$ with
+    $T(X) =  \trace(AX)$ and $T'(X) = \trace(XA)$. 
+    Both $T$ and $T'$ are linear transformations
+    \begin{align*} T(\alpha_1 X_1 + \alpha_2 X_2) &=
+    \trace(\alpha_1 X_1 + \alpha_2 X_2) \\
+    &= \trace(\alpha_1 X_1) + \trace(\alpha_2 X_2) \\
+    &= \alpha_1\trace(X_1) + \alpha_2\trace(X_2) \\
+    &= \alpha_1 T(X_1) + \alpha_2 T(X_2)
+    \end{align*}
+    Over the standard basis in
+    $M_{n\times n}^{\R}$ (a system of $e_{i, j}$ matrices of all entries zero
+    but the $(i, j)$th as 1) transformations are
+    $T(e_{i, j}) = \sum_k\sum_l a_{lk}(e_{i, j})_{kl} = a_{ji}(e_{i, j})_{ij}$,
+    and
+    $T'(e_{i, j}) = \sum_k\sum_l (e_{i, j})_{kl}a_{lk} = (e_{i, j})_{ij}a_{ji}$
+    It follows  $T = T'$, or $\trace(AX) = \trace(XA)$. And, for $X = B$,
+    $\trace(AB) = \trace(BA)$.
+
+    Alternatively, \begin{align*} \trace(AB) &= \sum_{i}\sum_{k}a_{ik}b_{ki} \\
+    &= \begin{aligned} &a_{11}b_{11} + \ldots + a_{1n}b_{n1} \\
+        &+ a_{21}b_{12} + \ldots + a_{2n}b_{n2} \\
+        &\qquad \vdots \\
+        &+ a_{n1}b_{1n} + \ldots + a_{nn}b_{nn} \end{aligned} \\
+    &= \sum_{k}\sum_{i} b_{ki}a_{ik} \\
+    &= \trace(BA)
+    \end{align*}
+\end{enumerate}
+\end{document}

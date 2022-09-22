@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{amsmath, amsfonts, enumitem}
+
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\vv}{\mathrm{v}}
+\newcommand{\ww}{\mathrm{w}}
+\newcommand{\zero}{\mathrm{0}}
+
+\begin{document}
+\begin{enumerate}[label=\textbf{6.\arabic*.}]
+    \item We'll prove this with contradiction. Assume the list of vectors
+    $A\vv_1, \ldots, A\vv_n$ is not a basis in $W$.
+    If they're linearly independent in $W$ but not generating, then there exists
+    a vector $\ww$ in $W$ that admits no representation as linear combination of
+    $A\vv_1, \ldots, A\vv_n$. An inverse map $A^{-1}: W \rightarrow V$ can be
+    defined such that $AA^{-1} = I_{W}$ and $A^{-1}A = I_{V}$, given $A$ is an
+    isomorphism. Then, $A^{-1}\ww = \vv$ for some $\vv$ in $V$, but $\vv$ admits
+    a unique representation in $\alpha_1\vv_1 + \ldots + \alpha_n\vv_n$. It
+    follows, $AA^{-1}\ww = \ww = A\vv = \alpha_1A\vv_1 + \ldots +
+    \alpha_nA\vv_n$.
+
+    Assume $A\vv_1, \ldots, A\vv_n$ are not linearly independent, then
+    for some scalars $\alpha_1, \ldots, \alpha_n$ not all zero,
+    $$\alpha_1A\vv_1 + \ldots + \alpha_nA\vv_n = \zero_W$$
+    Multiplying by $A^{-1}$, we get $\alpha_1\vv_1 + \ldots + \alpha_n\vv_n =
+    \zero_V$ which is only true when all scalars are zero.
+    
+    \item Suppose $\left[\begin{matrix}a & b\end{matrix}\right]^T$ is the right
+    inverse, then product $a+b$ must be $1$. It's apparent no right
+    inverse is left inverse for the product can not be defined.
+
+    \addtocounter{enumi}{3}
+    
+    \item \begin{align*} AB(AB)^{-1} = A(B(AB)^{-1}) = I\\
+    (AB)^{-1}AB = ((AB)^{-1}A)B = I
+    \end{align*}
+
+    \item If $A$ and $AB$ are invertible, then $B$ can be written as
+    $A^{-1}(AB)$ which is a product two invertible matrices and must be
+    invertible itself.
+
+    \item Suppose not, let $A$ be invertible. Then, $A^{-1}A = AA^{-1} = I$
+    implies $A^{-1}A^2A^{-1} = I$, but $A^2 = 0$, and we get a contradiction.
+    
+    \item Suppose $A:\F^n \to \F^m$, then $AB = (Ab_1, \ldots, Ab_k)$ where $b_i$
+    is the $i$th column of $B$ for some postive integer $k$. A column of $AB$
+    can be written as linear combination of columns of $A$,
+    $Ab_1 = a_1b_{1, 1} + a_2b_{1, 2} + \ldots + a_nb_{1, n}$.
+    Given $AB=0$ for some non-zero matrix $B$, $A$ is non-invertible for its 
+    linear combination of columns admits non-trivial representation of zero,
+    $Ab_1 = \cdots = Ab_k = 0$.
+
+    \item In case of $T_1$ notice that $T_1^2 = I$. For inverse of $T_2$,
+    define $T_2^{-1}:\F^5\to\F^5$ such that $T_2^{-1}((x_1, x_2, x_3, x_4, x_5)^T) =
+    (x_1, x_2 - ax_4, x_3, x_4, x_5)^T$.
+    $$T_2T_2^{-1}\mathrm{x} = T_2
+    \left(\left[\begin{matrix}x_1\\x_2-ax_4\\x_3\\x_4\\x_5\end{matrix}\right]\right)
+    = \left[\begin{matrix}x_1\\x_2\\x_3\\x_4\\x_5\end{matrix}\right]$$
+
+    \addtocounter{enumi}{2}
+
+    \item $(AA^{-1})^T = (A^{-1})^TA = A^{-1}A$, or $(A^{-1})^T = A^{-1}$.
+\end{enumerate}
+\end{document}

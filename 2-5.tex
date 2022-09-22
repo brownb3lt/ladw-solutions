@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{amsmath, amsfonts, enumitem}
+
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\uu}{\mathbf{u}}
+\newcommand{\ww}{\mathbf{w}}
+\newcommand{\zero}{\mathbf{0}}
+
+\begin{document}
+\begin{enumerate}[label=\textbf{5.\arabic*.}]
+    \item \begin{enumerate}[label=\alph*)]
+        \item True
+        \item False. Vector space of all continuous functions over interval
+        $[0, 1]$.
+        \item False. If $\vv_1, \vv_2 \ldots, \vv_n$ is some basis then
+        $\vv_1-\vv_n, \vv_2, \ldots, \vv_1+\vv_n$ is also a basis.
+        \item True. Two bases have same length.
+        \item False. It's $n+1$, $1, t, \ldots, t^n$.
+        \item True
+        \item False. A spanning set isn't necessarily linearly independent or a
+        basis.
+        \item True. Theorem 5.5.
+        \item True
+    \end{enumerate}
+    
+    \item If $\vv_1, \ldots, \vv_n$ is linearly independent but not generating
+    we can extend it to a basis in $V$, but that necessitates length of
+    the basis strictly greater than $n$ which is not possible.
+
+    If $\vv_1, \ldots, \vv_n$ span $V$ but are not linearly independent,
+    then it should be possible to delete a vector from the list and not change
+    its span (for the vector deleted would be a linear combination of other
+    vectors in the list). Deleting a vector reduces length by one, while
+    a generating set needs to have length of at least $n$.
+
+    \item If $\vv_1, \ldots, \vv_n$ is a basis in $V$, by definition $\dim V=n$.
+    However, if $\dim V = n$ and $\vv_1, \ldots, \vv_n$ are linearly
+    independent then it's a basis following the same reasoning as in first half
+    of 5.2.
+
+    \item Span of $\ww_1, \ww_2, \ww_3$ is same as span of
+    $\vv_1, \vv_2, \vv_3$,
+    less than 3.
+
+    \item Linear span of $\uu + \vv + \ww, \vv + \ww, \ww$ is same as 
+    linear span of $\uu, \vv, \ww$, and the length of the list of vectors equals
+    the dimension of vector space spanned by the basis.
+
+    \item Linear combination of the vectors,
+    $$\left[\begin{matrix}2\alpha_1+3\alpha_2+\alpha_3\\
+    -\alpha_1-2\alpha_2+\alpha_3\\
+    \alpha_1+50\alpha_3\\
+    5\alpha_1-921\alpha_3\\
+    -3\alpha_1\end{matrix}\right]$$
+    $\alpha_1$ is free in the last row, assume $\alpha_3, \alpha_2$ to be free
+    in 4th and 2nd row. Then, adding vectors $(1,0,0,0,0)^T$ and $(0,0,1,0,0)^T$
+    completes the basis.
+\end{enumerate}
+\end{document}
